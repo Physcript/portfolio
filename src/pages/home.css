@@ -1,0 +1,25 @@
+
+
+.skills{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	flex-wrap: wrap;
+	gap: .3em;
+	margin: .3em 0;
+}
+.title{
+	margin: 1em !important;
+}
+.label {
+	letter-spacing: .2em;
+}
+
+.six {
+	padding: 3em 0;
+}
+.row{
+	height: 100%
+}
+.ui.grid .one {
+	padding: 3em 0;
+}

@@ -1,23 +1,36 @@
-import logo from './logo.svg';
+
+import { BrowserRouter as Router, Switch , Route } from 'react-router-dom'
+
+// semantic
+import { Container , Grid} from 'semantic-ui-react'
+// pages
+import Home from './pages/Home'
+import MyWork from './components/MyWork'
+import LeftPanel from './components/LeftPanel'
+// css
+import 'semantic-ui-css/semantic.min.css'
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className = "home">
+      <Router>
+        <Switch>
+          <Container>
+              <Grid columns = {2} divided >
+                <Grid.Row> 
+                  <Grid.Column width = {3}>
+                      <LeftPanel />
+                  </Grid.Column>
+                  <Grid.Column width = {13}>
+                    <Route exact path = '/' component = {Home}> <Home /> </Route>
+                    <Route exact path = '/mywork' component = {MyWork}> <MyWork /> </Route>
+                  </Grid.Column>                  
+                </Grid.Row>
+              </Grid>
+          </Container>
+        </Switch>
+      </Router>
     </div>
   );
 }
