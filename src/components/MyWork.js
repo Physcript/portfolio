@@ -3,7 +3,7 @@
 const MyWork = () => {
 	return (
 		<>
-			<label>Work</label>
+			<label>Works</label>
 		</>
 	)
 }
